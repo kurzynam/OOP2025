@@ -5,6 +5,7 @@ public class Main {
         Segment line = new Segment(start, end);
         start.setY(200);
 
+
     }
 }
 
