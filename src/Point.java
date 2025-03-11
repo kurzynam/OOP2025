@@ -2,6 +2,10 @@ public class Point {
     private double x;
     private double y;
 
+    public Point(Point toCopy){
+        this.x = toCopy.getX();
+        this.y = toCopy.getY();
+    }
     @Override
     public String toString() {
 

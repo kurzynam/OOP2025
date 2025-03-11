@@ -30,4 +30,12 @@ public class Segment {
         this.start = new Point(x_start, y_start);
         this.end = new Point(x_end, y_end);
     }
+
+    @Override
+    public String toString() {
+        return "Segment{" +
+                "start=" + start +
+                ", end=" + end +
+                '}';
+    }
 }
