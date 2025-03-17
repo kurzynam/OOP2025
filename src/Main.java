@@ -14,8 +14,7 @@ public class Main {
         points.add(new Point(0,0));
         points.add(new Point(20,50));
         points.add(new Point(15, 80));
-        Polygon poly = new Polygon(points);
-
+        Polygon poly = new Polygon(points, new Style("#FA8072","#00FFFF",2));
         try{
             FileWriter fw = new FileWriter("ksztalty.svg");
             fw.write(poly.toSvg());
@@ -23,28 +22,6 @@ public class Main {
         }catch (IOException e){
             System.out.println("Not hello");
         }
-        int ch;
-        FileReader fr = null;
-        try
-        {
-            fr = new FileReader("krztalty.svg");
-        }
-        catch (FileNotFoundException fe)
-        {
-            System.out.println("File not found");
-        }
-        try{
-            while ((ch=fr.read())!=-1)
-                System.out.print((char)ch);
-            fr.close();
-        } catch (Exception e){
-            System.out.println("Wystąpił błąd");
-        }
-
-
-        // close the file
-
-
     }
 }
 
