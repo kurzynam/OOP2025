@@ -45,4 +45,14 @@ public class Polygon {
         this.gangnam = gangnam;
         this.points = points;
     }
+
+    public static Polygon createSquare(Segment s, Style style){
+        ArrayList<Point> points = new ArrayList<>();
+        points.add(s.getStart());
+        points.add(s.getEnd());
+        //Segment perpendicularSegment = s.findPerpendicular();
+        //points.add(perpendicularSegment.getStart());
+        //points.add(perpendicularSegment.getEnd());
+        return new Polygon(points,style);
+    }
 }
