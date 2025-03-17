@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main {
@@ -11,6 +13,15 @@ public class Main {
         points.add(new Point(20,50));
         points.add(new Point(15, 80));
         Polygon poly = new Polygon(points);
+
+        try{
+            FileWriter fw = new FileWriter("ksztalty.svg");
+            fw.write(poly.toSvg());
+            fw.close();
+        }catch (IOException e){
+            System.out.println("Not hello");
+        }
+
 
     }
 }
