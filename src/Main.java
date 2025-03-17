@@ -1,3 +1,5 @@
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -21,6 +23,26 @@ public class Main {
         }catch (IOException e){
             System.out.println("Not hello");
         }
+        int ch;
+        FileReader fr = null;
+        try
+        {
+            fr = new FileReader("krztalty.svg");
+        }
+        catch (FileNotFoundException fe)
+        {
+            System.out.println("File not found");
+        }
+        try{
+            while ((ch=fr.read())!=-1)
+                System.out.print((char)ch);
+            fr.close();
+        } catch (Exception e){
+            System.out.println("Wystąpił błąd");
+        }
+
+
+        // close the file
 
 
     }
