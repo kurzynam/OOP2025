@@ -14,19 +14,16 @@ public class Polygon extends Shape {
     }
 
     public String toSvg(){
-        String beginning = "<svg height=\"220\" width=\"500\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
-                "  <polygon points=\"";
+        String beginning = "<polygon points=\"";
 
 
         String midlle = "";
         for (Point p : points){
             midlle += p.getX() + "," +p.getY() + " ";
         }
-
-        String ending =        "\" " +
+        String ending ="\" " +
                 gangnam.toSvg() +
-                "\" />\n" +
-                "</svg>";
+                "\" />\n";
         return beginning + midlle + ending;
     }
 

@@ -16,4 +16,6 @@ public abstract class Shape {
     public void setGangnam(Style gangnam) {
         this.gangnam = gangnam;
     }
+
+    public abstract String toSvg();
 }
