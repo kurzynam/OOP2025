@@ -15,9 +15,11 @@ public class Main {
         points.add(new Point(20,50));
         points.add(new Point(15, 80));
         Shape poly = new Polygon(points, new Style("#FF0000","#00FFFF",2));
+        Shape ellipse = new Ellipse(new Style("#888888","#000000", 3),
+                new Point(100,100),100, 50);
         try{
             FileWriter fw = new FileWriter("ksztalty.svg");
-            fw.write(poly.toSvg());
+            fw.write(ellipse.toSvg());
             fw.close();
         }catch (IOException e){
             System.out.println("Not hello");
