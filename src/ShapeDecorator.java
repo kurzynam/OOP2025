@@ -10,4 +10,8 @@ public class ShapeDecorator implements Shape{
     public String toSvg(String param) {
         return null;
     }
+
+    public ShapeDecorator(Shape decoratedShape) {
+        this.decoratedShape = decoratedShape;
+    }
 }
