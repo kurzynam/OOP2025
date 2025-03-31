@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class Polygon implements Shape {
 
@@ -13,19 +14,19 @@ public class Polygon implements Shape {
                 '}';
     }
 
-    public String toSvg(){
-        String beginning = "<polygon points=\"";
-
-
-        String midlle = "";
-        for (Point p : points){
-            midlle += p.getX() + "," +p.getY() + " ";
-        }
-        String ending ="\" " +
-//                gangnam.toSvg() +
-                "\" />\n";
-        return beginning + midlle + ending;
-    }
+//    public String toSvg(){
+//        String beginning = "<polygon points=\"";
+//
+//
+//        String midlle = "";
+//        for (Point p : points){
+//            midlle += p.getX() + "," +p.getY() + " ";
+//        }
+//        String ending ="\" " +
+////                gangnam.toSvg() +
+//                "\" />\n";
+//        return beginning + midlle + ending;
+//    }
 
 
     public Polygon(ArrayList<Point> points) {
@@ -45,5 +46,17 @@ public class Polygon implements Shape {
         //points.add(perpendicularSegment.getStart());
         //points.add(perpendicularSegment.getEnd());
         return new Polygon(points,style);
+    }
+
+    public String toSvg(String param) {
+        String pointsString = "";
+        for(Point point : points) {
+            pointsString += point.getX() + "," + point.getY() + " ";
+        }
+        return String.format(Locale.ENGLISH, "<polygon points=\"%s\" %s/>", pointsString, param);
+    }
+
+    public String toSvg()    {
+        return toSvg("");
     }
 }

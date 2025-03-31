@@ -28,4 +28,9 @@ public class Ellipse implements Shape{
 //                "" + gangnam.toSvg() +
                 "\" />\n";
     }
+
+    @Override
+    public String toSvg(String param) {
+        return null;
+    }
 }
