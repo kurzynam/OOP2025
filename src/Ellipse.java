@@ -31,6 +31,6 @@ public class Ellipse implements Shape{
                         "\" cy=\"" + center.getY() +
                         "\"\n" +
                 "" + param +
-                        "\" />\n";
+                        " />\n";
     }
 }

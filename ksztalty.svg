@@ -1,0 +1,6 @@
+<svg height="1000.0" width="1000.0" xmlns="http://www.w3.org/2000/svg">
+	  <ellipse rx="10.0" ry="30.0" cx="30.0" cy="30.0"
+transform =" rotate(10.000000 0.000000 0.000000)  translate(-10.000000 0.000000)  scale(2.000000 1.000000) " />
+
+	<polygon points="0.0,0.0 20.0,50.0 15.0,80.0 " style="fill:#0000FF"/>
+</svg>
